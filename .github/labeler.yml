@@ -1,0 +1,8 @@
+sample:
+  - sample/**/*
+
+sample_A:
+  - any: ['sample/A/*']
+
+sample_B:
+  - any: ['sample/B/*']
