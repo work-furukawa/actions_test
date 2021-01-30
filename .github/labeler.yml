@@ -1,0 +1,17 @@
+# Add 'repo' label to any root file changes
+repo:
+  - ./*
+  
+# Add '@domain/core' label to any change within the 'core' package
+@domain/core:
+  - package/core/*
+  - package/core/**/*
+
+sample:
+  - sample/**/*
+
+sample_A:
+  - any: ['sample/A/*']
+
+sample_B:
+  - any: ['sample/B/*']
