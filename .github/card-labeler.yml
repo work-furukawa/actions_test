@@ -1,0 +1,9 @@
+action_test_project:
+  backlog:
+    - 'Status: backlog'
+  To do:
+    - 'Status: To do'
+  In progress:
+    - 'Status: In progress'
+  done:
+    - 'Status: done'
