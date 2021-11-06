@@ -1,0 +1,22 @@
+name: "Close stale issues"
+on:
+  schedule:
+  - cron: "0 1 * * *"
+
+jobs:
+  stale:
+    name: stale
+    runs-on: self-hosted
+    container:
+      image: ubuntu:latest
+
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-pr-message: '警告：このprは1日間更新がないため2日後にcloseします。closeしたくない場合は【close予定】ラベルを外してください。'
+        close-pr-message: '警告メッセージから更新がないため削除します'
+        days-before-pr-stale: 1
+        days-before-pr-close: 2
+        exempt-pr-labels: "Backlog"
+        stale-pr-label: "close予定"
