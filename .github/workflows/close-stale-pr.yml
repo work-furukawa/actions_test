@@ -6,10 +6,7 @@ on:
 jobs:
   stale:
     name: stale
-    runs-on: self-hosted
-    container:
-      image: ubuntu:latest
-
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/stale@v3
       with:
